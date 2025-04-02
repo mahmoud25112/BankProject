@@ -1,0 +1,29 @@
+Keys for the relations and functional dependencies
+FD set for:
+BRANCH 
+{Branch_id->Name, Branch_id->Address, Address->Name, Address->Branch_id}
+Keys - Branch_id, Address
+CUSTOMER
+{SSN->First_name, SSN->Last_name, SSN->Address, SSN->Email, SSN->Phone_num, SSN->Branch_id, SSN->Date_of_birth, Email->SSN, Email->First_name, Email->Last_name, Email->Address, Email->Phone_num, Email->Branch_id, Email->Date_of_birth, Phone_num->SSN, Phone_num->First_name, Phone_num->Last_name, Phone_num->Address, Phone_num->Email, Phone_num->Branch_id, Phone_num->Date_of_birth}
+Keys - SSN, Email, Phone_num
+BANKER
+{Banker_id->Branch_id, Banker_id->First_name, Banker_id->Last_name, Banker_id->Address, Banker_id->Email, Banker_id->Phone_num, Banker_id->Date_of_birth, Banker_id->SSN, Email->Branch_id, Email->Banker_id, Email->First_name, Email->Last_name, Email->Address, Email->Phone_num, Email->Date_of_birth, Email->SSN, Phone_num->Branch_id, Phone_num->Banker_id, Phone_num->First_name, Phone_num->Last_name, Phone_num->Address, Phone_num->Email, Phone_num->Date_of_birth, Phone_num->SSN, SSN->Branch_id, SSN->Banker_id, SSN->First_name, SSN->Last_name, SSN->Address, SSN->Email, SSN->Phone_num, SSN->Date_of_birth}
+Keys - Banker_id, Email, Phone_num, SSN
+LOANS
+{Loan_id->Loan_amount, Loan_id->Banker_id, Loan_id->SSN, SSN->Loan_id, SSN->Loan_amount, SSN->Banker_id}
+Keys - Loan_id, SSN
+ACCOUNT
+{Account_num->Routing_num, Account_num->Balance, Account_num->Account_type, Account_num->SSN, Routing_num->Account_num, Routing_num->Balance, Routing_num->Account_type, Routing_num->SSN}
+Keys - Account_num, Routing_num
+TRANSACTION
+{Transaction_id->Transaction_type,Transaction_id->Date}
+Keys - Transaction_id
+PAY_OR_RECEIVE
+{Transaction_id->Pay_or_receive, Transaction_id->Receive_account_num, Transaction_id->Amount, Transaction_id->Account_num}
+Keys - Transaction_id
+DEPOSIT_OR_WITHDRAW
+{Transaction_id->Deposit_or_withdraw, Transaction_id->Savings_withdraw_left, Transaction_id->Amount, Transaction_id->Account_num}
+Keys - Transaction_id
+TRANSFER
+{Transaction_id->To_checking, Transaction_id->To_savings, Transaction_id->Amount, Transaction_id->Account_num}
+Keys - Transaction_id
