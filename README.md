@@ -11,7 +11,8 @@ This project designs and implements a relational database for a bank, capturing 
 
 ## Screenshots
 <!-- Replace with your actual image paths -->
-<img src="path/to/ER_Diagram.png" alt="Entity Relationship Diagram" style="width:100%;" />
+<img src="BankProject/images
+/ER DIagram.pn" alt="Entity Relationship Diagram" style="width:100%;" />
 <br>
 <img src="path/to/SQL_Query.png" alt="Sample SQL Query" style="width:100%;" />
 
